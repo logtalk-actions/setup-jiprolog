@@ -16,8 +16,8 @@ async function main() {
 }
 
 function checkPlatform() {
-  if (process.platform !== 'linux')
+  if (process.platform == 'win32')
     throw new Error(
-      '@logtalk-actions/setup-jiprolog only supports Ubuntu Linux at this time'
+      '@logtalk-actions/setup-logtalk does not support Windows at this time'
     )
 }
