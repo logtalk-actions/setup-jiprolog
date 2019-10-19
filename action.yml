@@ -1,0 +1,10 @@
+name: Setup JIProlog
+description: Installs the specified JIProlog version
+inputs:
+  jiprolog-version:
+    description: JIProlog version to install
+    required: true
+    default: latest
+runs:
+  using: 'node12'
+  main: 'src/setup-jiprolog.js'

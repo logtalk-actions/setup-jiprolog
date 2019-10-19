@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -eo pipefail
+
+version=$1
+
+cd /tmp
+
+wget https://github.com/jiprolog/jiprolog/releases/download/v$version/JIProlog-$version.zip
+unzip JIProlog-$version.zip
+cp JIProlog/jipconsole.jar "$GITHUB_WORKSPACE"
+export CLASSPATH="$GITHUB_WORKSPACE/jipconsole.jar":"$CLASSPATH"
+export JIP_HOME="$GITHUB_WORKSPACE"
