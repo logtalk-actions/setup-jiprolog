@@ -15,11 +15,8 @@ jobs:
         with:
           jiprolog-version: 4.1.6.1
       - name: Run trivial sanity test
-        env:
-          CLASSPATH: "$GITHUB_WORKSPACE/jipconsole.jar:$CLASSPATH"
-          JIP_HOME: "$GITHUB_WORKSPACE"
         run: |
           ls "$GITHUB_WORKSPACE"
-          echo $CLASSPATH
-          echo $JIP_HOME
-          java -jar -DLOGTALKHOME="$LOGTALKHOME" -DLOGTALKUSER="$LOGTALKUSER" -DHOME="$HOME" "$JIP_HOME/jipconsole.jar" -g halt
+          echo $LOGTALKHOME
+          echo $LOGTALKUSER
+          java -jar -DLOGTALKHOME="$LOGTALKHOME" -DLOGTALKUSER="$LOGTALKUSER" -DHOME="$HOME" jipconsole.jar -g halt
