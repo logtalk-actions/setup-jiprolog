@@ -17,4 +17,4 @@ jobs:
       - name: Run trivial sanity test
         env:
           DISPLAY: "localhost:0"
-        run: java -jar -DLOGTALKHOME="/usr/local/logtalk" -DLOGTALKUSER="$HOME/logtalk" -DHOME="$HOME" jipconsole.jar -g halt
+        run: java -jar -Djava.awt.headless=true -DLOGTALKHOME="/usr/local/logtalk" -DLOGTALKUSER="$HOME/logtalk" -DHOME="$HOME" jipconsole.jar -g halt
