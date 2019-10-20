@@ -10,15 +10,14 @@ jobs:
         operating-system: [ubuntu-latest]
     timeout-minutes: 2
     steps:
-      - name: Set environment variables
-        env:
-          CLASSPATH: "$GITHUB_WORKSPACE/jipconsole.jar:$CLASSPATH"
-          JIP_HOME: "$GITHUB_WORKSPACE"
       - name: Install JIProlog
         uses: logtalk-actions/setup-jiprolog@master
         with:
           jiprolog-version: 4.1.6.1
       - name: Run trivial sanity test
+        env:
+          CLASSPATH: "$GITHUB_WORKSPACE/jipconsole.jar:$CLASSPATH"
+          JIP_HOME: "$GITHUB_WORKSPACE"
         run: |
           ls "$GITHUB_WORKSPACE"
           echo $CLASSPATH
