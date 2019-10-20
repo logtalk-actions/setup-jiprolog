@@ -2,6 +2,8 @@
 
 This actions sets up a JIProlog environment for use in workflows.
 
+![](https://github.com/logtalk-actions/setup-jiprolog/workflows/Test/badge.svg)
+
 # Usage
 
 See [action.yml](action.yml).

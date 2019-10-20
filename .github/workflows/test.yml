@@ -1,0 +1,22 @@
+name: Test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest]
+    timeout-minutes: 2
+    steps:
+      - name: Install JIProlog
+      - uses: logtalk-actions/setup-jiprolog@master
+        with:
+          jiprolog-version: 4.1.6.1
+      - name: Install Logtalk
+        uses: logtalk-actions/setup-logtalk@master
+        with:
+          logtalk-version: latest
+      - name: Run Logtalk aliases example tests
+        run: java -jar -DLOGTALKHOME="$LOGTALKHOME" -DLOGTALKUSER="$LOGTALKUSER" -DHOME="$HOME" "$JIP_HOME/jipconsole.jar" -g halt
