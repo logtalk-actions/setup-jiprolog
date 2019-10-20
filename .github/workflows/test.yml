@@ -11,7 +11,7 @@ jobs:
     timeout-minutes: 2
     steps:
       - name: Install JIProlog
-      - uses: logtalk-actions/setup-jiprolog@master
+        uses: logtalk-actions/setup-jiprolog@master
         with:
           jiprolog-version: 4.1.6.1
       - name: Install Logtalk
