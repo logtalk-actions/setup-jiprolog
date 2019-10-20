@@ -15,8 +15,6 @@ jobs:
         with:
           jiprolog-version: 4.1.6.1
       - name: Run trivial sanity test
-        run: |
-          ls "$GITHUB_WORKSPACE"
-          echo $LOGTALKHOME
-          echo $LOGTALKUSER
-          java -jar -DLOGTALKHOME="$LOGTALKHOME" -DLOGTALKUSER="$LOGTALKUSER" -DHOME="$HOME" jipconsole.jar -g halt
+        env:
+          DISPLAY "localhost:0"
+        run: java -jar -DLOGTALKHOME="$/usr/local/logtalk" -DLOGTALKUSER="$HOME/logtalk" -DHOME="$HOME" jipconsole.jar -g halt
