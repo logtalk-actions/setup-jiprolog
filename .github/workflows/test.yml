@@ -9,6 +9,9 @@ jobs:
       matrix:
         operating-system: [ubuntu-latest]
     timeout-minutes: 2
+    env:
+      CLASSPATH: "$GITHUB_WORKSPACE/jipconsole.jar":"$CLASSPATH"
+      JIP_HOME: "$GITHUB_WORKSPACE"
     steps:
       - name: Install JIProlog
         uses: logtalk-actions/setup-jiprolog@master
