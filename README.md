@@ -15,13 +15,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
       - uses: logtalk-actions/setup-jiprolog@master
         with:
           jiprolog-version: 4.1.6.1
       - uses: logtalk-actions/setup-logtalk@master
         with:
-          logtalk-version: 3.31.0
+          logtalk-version: latest
+      - uses: actions/checkout@v1
 ```
 
 # License
@@ -30,4 +30,4 @@ The scripts and documentation in this project are released under the [Apache Lic
 
 # Current Status
 
-This action is in active development.
+This action is in active development. This action does not support Windows at this time.
