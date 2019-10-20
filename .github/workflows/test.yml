@@ -14,9 +14,9 @@ jobs:
         uses: logtalk-actions/setup-jiprolog@master
         with:
           jiprolog-version: 4.1.6.1
-      - name: Install Logtalk
-        uses: logtalk-actions/setup-logtalk@master
-        with:
-          logtalk-version: latest
-      - name: Run Logtalk aliases example tests
-        run: java -jar -DLOGTALKHOME="$LOGTALKHOME" -DLOGTALKUSER="$LOGTALKUSER" -DHOME="$HOME" "$JIP_HOME/jipconsole.jar" -g halt
+      - name: Run trivial sanity test
+        run: |
+          ls "$GITHUB_WORKSPACE"
+          echo $CLASSPATH
+          echo $JIP_HOME
+          java -jar -DLOGTALKHOME="$LOGTALKHOME" -DLOGTALKUSER="$LOGTALKUSER" -DHOME="$HOME" "$JIP_HOME/jipconsole.jar" -g halt
