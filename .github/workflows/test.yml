@@ -16,5 +16,5 @@ jobs:
           jiprolog-version: 4.1.6.1
       - name: Run trivial sanity test
         env:
-          DISPLAY "localhost:0"
+          DISPLAY: "localhost:0"
         run: java -jar -DLOGTALKHOME="$/usr/local/logtalk" -DLOGTALKUSER="$HOME/logtalk" -DHOME="$HOME" jipconsole.jar -g halt
