@@ -17,18 +17,21 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: logtalk-actions/setup-jiprolog@master
+      - name: Install JIProlog backend
+        uses: logtalk-actions/setup-jiprolog@master
         with:
           jiprolog-version: 4.1.6.1
-      - uses: logtalk-actions/setup-logtalk@master
+      - name: Install Logtalk
+        uses: logtalk-actions/setup-logtalk@master
         with:
           logtalk-version: latest
-      - uses: actions/checkout@v1
+      - name: Checkout Logtalk application to be tested
+        uses: actions/checkout@v1
 ```
 
 # License
 
-The scripts and documentation in this project are released under the [Apache License 2.0](LICENSE).
+This project is released under the [Apache License 2.0](LICENSE).
 
 # Current Status
 

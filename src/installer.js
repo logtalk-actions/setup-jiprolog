@@ -4,7 +4,7 @@ const path = require('path')
 module.exports = {installJIProlog}
 
 /**
- * Install Logtalk.
+ * Install JIProlog.
  *
  * @param {string} version
  */
