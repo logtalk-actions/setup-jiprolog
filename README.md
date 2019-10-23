@@ -1,14 +1,14 @@
-# setup-jiprolog
+# `setup-jiprolog`
 
 This actions sets up a JIProlog environment for use in workflows.
 
 ![](https://github.com/logtalk-actions/setup-jiprolog/workflows/Test/badge.svg)
 
-# Usage
+## Usage
 
 See [action.yml](action.yml).
 
-# Example
+## Example
 
 ```yml
 on: push
@@ -31,10 +31,10 @@ jobs:
         run: logtalk_tester -p ji
 ```
 
-# License
+## License
 
 This project is released under the [Apache License 2.0](LICENSE).
 
-# Current Status
+## Current Status
 
 This action is in active development. This action does not support Windows at this time.
