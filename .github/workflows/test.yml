@@ -18,12 +18,10 @@ jobs:
         env:
           DISPLAY: "localhost:0"
         run: |
-          echo $HOME
-          ls "$HOME/logtalk"
           java -jar -Djava.awt.headless=true -DLOGTALKHOME="/usr/local/logtalk" -DLOGTALKUSER="$HOME/logtalk" -DHOME="$HOME" jipconsole.jar -g halt
       - name: Install Logtalk
         uses: logtalk-actions/setup-logtalk@master
         with:
           logtalk-version: latest
       - name: Run Logtalk aliases example tests
-        run: cd ~/logtalk/examples/aliases && logtalk_tester -p ji
+        run: cd "$LOGTALKUSER/examples/aliases" && logtalk_tester -p ji
