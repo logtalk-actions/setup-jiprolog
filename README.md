@@ -20,7 +20,7 @@ jobs:
       - name: Install JIProlog backend
         uses: logtalk-actions/setup-jiprolog@master
         with:
-          jiprolog-version: 4.1.6.1
+          jiprolog-version: 4.1.7.1
       - name: Install Logtalk
         uses: logtalk-actions/setup-logtalk@master
         with:

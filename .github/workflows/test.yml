@@ -13,7 +13,7 @@ jobs:
       - name: Install JIProlog
         uses: logtalk-actions/setup-jiprolog@master
         with:
-          jiprolog-version: 4.1.6.1
+          jiprolog-version: 4.1.7.1
       - name: Run trivial sanity test
         env:
           DISPLAY: "localhost:0"
