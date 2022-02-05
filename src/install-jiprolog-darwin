@@ -6,6 +6,7 @@ version=$1
 
 cd /tmp
 
+brew install coreutils
 if [ "$version" == "latest" ] ; then
 	wget https://github.com/jiprolog/jiprolog/releases/download/v4.1.7.1/JIProlog-4.1.7.1.zip
 	unzip JIProlog-4.1.7.1.zip
